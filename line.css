@@ -1,0 +1,313 @@
+.border_line_box {
+  text-align: center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:auto;
+  margin-left:-191px;
+  margin-top:-30px;
+}
+.border_line_box .border_line {
+  position: relative;
+  width: 380px;
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+}
+.border_line_box .border_line:hover {
+  border: 1px solid transparent;
+}
+.border_line_box .border_line:hover .line-1 {
+  -webkit-animation: move1 2000ms infinite ease;
+          animation: move1 2000ms infinite ease;
+}
+.border_line_box .border_line:hover .line-2 {
+  -webkit-animation: move2 2000ms infinite ease;
+          animation: move2 2000ms infinite ease;
+}
+.border_line_box .border_line:hover .line-3 {
+  -webkit-animation: move3 2000ms infinite ease;
+          animation: move3 2000ms infinite ease;
+}
+.border_line_box .border_line:hover .line-4 {
+  -webkit-animation: move4 2000ms infinite ease;
+          animation: move4 2000ms infinite ease;
+}
+.border_line_box .line-1 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+}
+.border_line_box .line-2 {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: white;
+  left: 0;
+  top: 0;
+}
+.border_line_box .line-3 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: white;
+  right: 0;
+  top: 0;
+}
+.border_line_box .line-4 {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: white;
+  right: 0;
+  bottom: 0;
+}
+
+@-webkit-keyframes move1 {
+  0% {
+    height: 100%;
+    bottom: 0;
+  }
+  54% {
+    height: 0;
+    bottom: 100%;
+  }
+  55% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0;
+  }
+}
+
+@keyframes move1 {
+  0% {
+    height: 100%;
+    bottom: 0;
+  }
+  54% {
+    height: 0;
+    bottom: 100%;
+  }
+  55% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0;
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes move2 {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@-webkit-keyframes move3 {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+  54% {
+    height: 0;
+    top: 100%;
+  }
+  55% {
+    height: 0;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+@keyframes move3 {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+  54% {
+    height: 0;
+    top: 100%;
+  }
+  55% {
+    height: 0;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+@-webkit-keyframes move4 {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  55% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+@keyframes move4 {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  55% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+
+
+  /*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##Device = 랩탑, 데스크탑
+  ##Screen = 1025px에서 1280px 사이
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .border_line_box {
+      margin-left:-191px;
+      margin-top:-30px;
+    }
+
+    .border_line_box .border_line {
+      width: 380px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 1.125em;
+    }
+  }
+  
+  /*
+  ##Device = Tablets, Ipads (portrait),
+  ##Screen = B/w 768px to 1024px
+  ##Device = 태블릿, 아이패드(세로),
+  ##Screen = 768px에서 1024px 사이
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .border_line_box {
+      margin-left:-191px;
+      margin-top:-30px;
+    }
+
+    .border_line_box .border_line {
+      width: 380px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 1.125em;
+    }
+  }
+  
+  /*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+  ##Device = 태블릿, 아이패드(가로)
+  ##Screen = 768px에서 1024px 사이
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .border_line_box {
+      margin-left:-191px;
+      margin-top:-30px;
+    }
+
+    .border_line_box .border_line {
+      width: 380px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 1.125em;
+    }
+  }
+  
+  /*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+  ##Device = 저해상도 태블릿, 모바일(가로)
+  ##Screen = 481px에서 767px 사이
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    .border_line_box {
+      margin-left:-151px;
+      margin-top:-30px;
+    }
+
+    .border_line_box .border_line {
+      width: 300px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 1.125em;
+    }
+  }
+  
+  /*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+  ##Device = 대부분의 스마트폰 모바일 기기(세로)
+  ##Screen = 320px에서 479px 사이
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    .border_line_box {
+      margin-left:-126px;
+      margin-top:-30px;
+    }
+
+    .border_line_box .border_line {
+      width: 250px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 1.125em;
+    }
+  }

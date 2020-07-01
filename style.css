@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&display=swap');
+*{
+  box-sizing:border-box;
+  -webkit-tap-highlight-color: transparent
+}
+
+html,body{
+  height:100%;
+  touch-action: manipulation;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #f4f5f6;
+  font-size:14px;
+  color:#666666;
+}
+
+div {
+  display:block;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-box {
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#page-scroll {
+  position: absolute;
+  width: 100%;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.section {
+  width: 100%;
+  height: 898px;
+}
+
+.main {
+  background-color: rgb(0,0,0);
+  position: relative;
+  cursor: pointer;
+}
+
+.skills {
+  background-color: white;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/* project */
+.project {
+  background-color: rgb(0,0,0);
+  position: relative;
+}
+.container {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+}
+
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+
+/* contact */
+.contact {
+  background-color: white;
+}
+
+.gform {
+  width: 60%;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.contact fieldset, input, textarea, button {
+  border:0;
+  outline-style:none;
+  border-radius:0px 0px;
+  -webkit-appearance:none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact fieldset {
+  margin : 10px;
+}
+
+.contact input {
+  width: 60%;
+  height: 30px;
+  background-color: transparent;
+  border: dotted 1px gray;
+  border-radius: 15px;
+  padding: 20px;
+  float: right;
+}
+
+.contact textarea {
+  width: 60%;
+  height: 100px;
+  float: right;
+  padding: 20px;
+  background-color: transparent;
+  border: dotted 1px gray;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  resize:none;
+}
+
+.contact label {
+  float: left;
+  font-size: 1.5em;
+  line-height: 42px;
+}
+
+/* submit button */
+
+#submit-wrap .button {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #1c89ff;
+  border: solid 1px transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+#submit-wrap .button:hover {
+  background-color: transparent;
+  border-color: #fff;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+#submit-wrap #loader {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  margin: 30px auto 0 auto;
+  border: solid 2px #424242;
+  border-top: solid 2px #1c89ff;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+#submit-wrap #check {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-transform: translate3d(-4px, 50px, 0);
+          transform: translate3d(-4px, 50px, 0);
+  opacity: 0;
+}
+#submit-wrap #check span:nth-child(1) {
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+#submit-wrap #check span:nth-child(2) {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transform: rotate(-45deg) translate3d(14px, -4px, 0);
+          transform: rotate(-45deg) translate3d(14px, -4px, 0);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+#submit-wrap #loader.active {
+  -webkit-animation: loading 2s ease-in-out;
+          animation: loading 2s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#submit-wrap #check.active {
+  opacity: 1;
+  -webkit-transform: translate3d(-4px, 4px, 0);
+          transform: translate3d(-4px, 4px, 0);
+  -webkit-transition: all 0.5s cubic-bezier(0.49, 1.74, 0.38, 1.74);
+  transition: all 0.5s cubic-bezier(0.49, 1.74, 0.38, 1.74);
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+@-webkit-keyframes loading {
+  30% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+    border-color: #262626;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+    border-color: #1c89ff;
+  }
+}
+
+@keyframes loading {
+  30% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+    border-color: #262626;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+    border-color: #1c89ff;
+  }
+}
+
+
+/* button */
+#btn {
+  width: 60px;
+  height: 60px;
+  color: rgb(136, 136, 136);
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  overflow: hidden;
+  z-index: 1000;
+  background-color: white;
+  text-align: center;
+  font-size: 1em;
+  opacity: 1;
+  transition: opacity 2000ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 2000ms;
+}
+
+.border {
+  position: absolute;
+  width: calc( 100% - 2px );
+  padding-bottom: calc( 100% - 2px );
+  border: 1px solid rgb(136, 136, 136);
+  opacity: 0.3;
+}
+
+.solid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:-100%;
+  transform: translate3d(0px, 0px, 0px);
+  background-color: rgb(136, 136, 136);
+  transition: -webkit-transform 600ms cubic-bezier(0.165, 0.84, 0.44, 1) 0ms;
+}
+
+.txt {
+  position: absolute;   
+  font-size: 24px;
+  color: rgb(136, 136, 136);
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+}
+
+  /*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##Device = 랩탑, 데스크탑
+  ##Screen = 1025px에서 1280px 사이
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    #btn {
+      width: 50px;
+      height:50px;
+    }
+  
+  }
+  
+  /*
+  ##Device = Tablets, Ipads (portrait),
+  ##Screen = B/w 768px to 1024px
+  ##Device = 태블릿, 아이패드(세로),
+  ##Screen = 768px에서 1024px 사이
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #btn {
+      width: 45px;
+      height:45px;
+    }
+  }
+  
+  /*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+  ##Device = 태블릿, 아이패드(가로)
+  ##Screen = 768px에서 1024px 사이
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #btn {
+      width: 45px;
+      height:45px;
+    }
+  }
+  
+  /*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+  ##Device = 저해상도 태블릿, 모바일(가로)
+  ##Screen = 481px에서 767px 사이
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    #btn {
+      width: 40px;
+      height:40px;
+    }
+
+    .txt {
+      font-size: 20px;
+      margin-top: -10px;
+    }
+  
+  }
+  
+  /*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+  ##Device = 대부분의 스마트폰 모바일 기기(세로)
+  ##Screen = 320px에서 479px 사이
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    #btn {
+      width: 40px;
+      height:40px;
+    }
+
+    .txt {
+      font-size: 20px;
+      margin-top: -10px;
+    }
+  }

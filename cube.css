@@ -1,0 +1,147 @@
+#cube_wrap{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -250px;
+  /* transform: translate(-50%, -50%); */
+}
+
+.cube_container {
+  width: 100%;
+  height: 100%;
+  position:relative;
+  margin:100px;
+  perspective: 2000px;
+    -webkit-perspective: 2000px;
+      -moz-perspective: 2000px;
+        -o-perspective: 2000px;
+}
+
+#cube {
+  width: 100%;
+  padding-bottom: 100%;
+  position: absolute;
+  cursor: pointer;
+  transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+          -o-transform-style: preserve-3d;
+
+  transition: transform 5s;
+    -webkit-transition: -webkit-transform 5s;
+        -moz-transition: -moz-transform 5s;
+          -o-transition: -o-transform 5s;
+
+}
+
+#cube div {
+  position:absolute; 
+  width: 100%;
+  height: 100%;
+  background:#fff;
+  border:1px solid #000;
+  opacity:0.5;
+}
+
+.hidden {
+  /* visibility:hidden; */
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  height: 30%;
+  font-size:40px;
+  text-align:center;
+  font-weight:300;
+}
+
+  /*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+  ##Device = 랩탑, 데스크탑
+  ##Screen = 1025px에서 1280px 사이
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    #cube_wrap{ 
+      width: 280px;
+      height: 280px;
+      margin-left: -190px;
+      margin-top: -240px;
+    }
+  }
+  
+  /*
+  ##Device = Tablets, Ipads (portrait),
+  ##Screen = B/w 768px to 1024px
+  ##Device = 태블릿, 아이패드(세로),
+  ##Screen = 768px에서 1024px 사이
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    #cube_wrap{ 
+      width: 250px;
+      height: 250px;
+      margin-left: -175px;
+      margin-top: -225px;
+    }
+  }
+  
+  /*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+  ##Device = 태블릿, 아이패드(가로)
+  ##Screen = 768px에서 1024px 사이
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #cube_wrap{ 
+      width: 250px;
+      height: 250px;
+      margin-left: -175px;
+      margin-top: -225px;
+    }
+  }
+  
+  /*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+  ##Device = 저해상도 태블릿, 모바일(가로)
+  ##Screen = 481px에서 767px 사이
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    #cube_wrap{ 
+      width: 200px;
+      height: 200px;
+      margin: auto;
+    }
+    .hidden {
+      font-size:25px;
+    }
+  }
+  
+  /*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+  ##Device = 대부분의 스마트폰 모바일 기기(세로)
+  ##Screen = 320px에서 479px 사이
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    #cube_wrap{ 
+      width: 150px;
+      height: 150px;
+      margin: 0;
+      top:0;
+      left:0;
+    }
+    .hidden {
+      font-size:20px;
+    }
+  }

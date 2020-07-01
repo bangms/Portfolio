@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <title> Frontend </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="line.css">
+    <link rel="stylesheet" href="cube.css">
+    <!-- 나눔스퀘어 폰트 적용 -->
+    <link href="NanumSquare/NanumSquare.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="scroll-box">
+      <div id="page-scroll">
+        <div class="main section">
+          <div class="border_line_box">
+            <div class="border_line">
+              Bang's Portfolio
+              <span class="line-1"></span>
+              <span class="line-2"></span>
+              <span class="line-3"></span>
+              <span class="line-4"></span>
+            </div>
+          </div>
+        </div>
+        <div class="skills section">
+          <div id="cube_wrap">
+            <div class="cube_container">
+              <div id="cube">
+                <div id="Web"><span class="hidden">HTML&amp;CSS</span></div>
+                <div id="Javascript"><span class="hidden">Javascript</span></div>
+                <div id="React"><span class="hidden">React</span></div>
+                <div id="Git"><span class="hidden">Git</span></div>
+                <div id="Jquery"><span class="hidden">Jquery</span></div>
+                <div id="Nodejs"><span class="hidden">Node.js</span></div>
+              </div>
+            </div>
+          </div>
+          <div id="navigation_wrap">
+            <div class="navigation_bar">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="project section">
+          <div class="container">
+            <div class="card">
+              <h3 class="title">Card 1</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+              </div>
+              <div class="circle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle class="stroke" cx="60" cy="60" r="50"/>
+              </svg>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="title">Card 2</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+              </div>
+              <div class="circle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle class="stroke" cx="60" cy="60" r="50"/>
+              </svg>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="title">Card 3</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+              </div>
+              <div class="circle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle class="stroke" cx="60" cy="60" r="50"/>
+              </svg>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="title">Card 4</h3>
+              <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+              </div>
+              <div class="circle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <circle class="stroke" cx="60" cy="60" r="50"/>
+              </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact section">
+          <form class="gform" method="POST" data-email="example@email.net" action="https://script.google.com/a/knou.ac.kr/macros/s/AKfycbxN7SZB70T9U7wOvBgYGQ1WbvoBb2QHq-N0wHXDKQ/exec">
+          <form class="gform">
+            <div class="form-elements">
+              <fieldset class="input-wrap">
+                <label for="name">Name : </label>
+                <input id="name" name="name" required placeholder="name" />
+              </fieldset>
+        
+              <fieldset class="input-wrap">
+                <label for="email">Your Email Address :</label>
+                <input id="email" name="email" type="email" value=""
+                required placeholder="your.name@email.com"/>
+              </fieldset>
+        
+              <fieldset class="input-wrap">
+                <label for="phoneNumber">Phone Number : </label>
+                <input id="phoneNumber" name="phoneNumber" placeholder="Phone Number" />
+              </fieldset>
+
+              <fieldset class="input-wrap">
+                <label for="message">Message : </label>
+                <textarea id="message" name="message" rows="10"
+                required placeholder="Message"></textarea>
+              </fieldset>
+              
+              <div id="submit-wrap">
+                <button id="submit" class="button button-success pure-button button-xlarge" type="submit">Send</button>
+                <div id="loader">
+                  <div id="check">
+                    <span class="check-one"></span>
+                    <span class="check-two"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="btn">
+    <div class="border"></div>
+    <div class="solid"></div>
+    <div class="txt">?</div>
+  </div>
+  <script src="scroll.js"></script>
+  <script src="main.js"></script>
+  <script src="cube.js"></script>
+</body>
+</html>
